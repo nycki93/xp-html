@@ -39,7 +39,8 @@ module.exports = ((my) => (
   my.out.sexpr = my.out.withScope((sc, str) => (
     sc.tokens = my.tokens(str),
     sc.expr = my.expr(sc.tokens),
-    sc.expr[0]
+    // handle missing parens as implicit list
+    sc.expr.length > 1 ? sc.expr : sc.expr[0]
   )),
 
   require.main === module && (
