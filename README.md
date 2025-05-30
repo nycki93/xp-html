@@ -1,22 +1,12 @@
-# plates
+sample code for friends
 
-sample code for friend
+## plates
 
-## set up
+generate license plates
 
-download this code. if you're on github: Code -> Download ZIP.
+[link](https://nycki93.github.io/xp-html/plates/)
 
-extract to a folder. open a terminal in */plates*.
+## remember me
 
-if you haven't already, install nodejs:
-
-```
-winget install nodejs
-```
-
-install and run the project:
-
-```
-npm install
-npm run start
-```
+interrupt the user the first time they visit a page
+[link](https://nycki93.github.io/xp-html/remember-me/)
