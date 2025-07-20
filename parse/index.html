@@ -1,0 +1,18 @@
+<textarea>
+name alice age 42
+name "bob \"parr" age 69
+</textarea>
+<p><button>parse</button></p>
+<div></div>
+<script>
+    const i = document.querySelector('textarea');
+    const o = document.querySelector('div');
+    const b = document.querySelector('button');
+    b.onclick=()=>{
+        const fields=(i.value
+            .split('\n')
+            .map(line=>[...line.matchAll(/([^\s"]+)|"((?:[^"\\]|\\.)+)"/g)].map((m=>m[0])))
+        );
+        o.textContent=JSON.stringify(fields,null,2);
+    }
+</script>
